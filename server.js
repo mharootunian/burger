@@ -1,4 +1,7 @@
 const express = require("express");
-const express = require("mysql");
-const express = require("express-handlebars");
+const mysql = require("mysql");
+const hb = require("express-handlebars");
+const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded( {extended: true} ));
