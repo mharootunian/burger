@@ -7,7 +7,7 @@ module.exports = {
             if (err)
                 throw err;
             
-            callback(res);
+            callback(data);
         });
     },
 
