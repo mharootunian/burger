@@ -2,13 +2,13 @@ const express = require("express");
 const mysql = require("mysql");
 const hb = require("express-handlebars");
 const app = express();
-const routes = require("./controllers/routes");
+const routes = require("./controllers/burgers_controller");
 
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(express.urlencoded( {extended: true} ));    
-app.use("/", "./controllers/routes.js");
+app.use("/", routes);
 
 app.engine("handlebars", hb());
 app.set("view engine", "handlebars");
